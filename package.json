@@ -19,7 +19,7 @@
     "react-use-action-cable-ts": "2.0.8"
   },
   "devDependencies": {
-    "@playwright/test": "1.48.1",
+    "@playwright/test": "1.48.2",
     "@types/node": "22.7.8",
     "@types/rails__actioncable": "6.1.11",
     "@types/react": "18.2.79",
