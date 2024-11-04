@@ -1,0 +1,31 @@
+{
+  "name": "playwright-websocket-issue-repro",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "start:wss": "node ./tests/utils/startWebSocketServer.js",
+    "playwright:test": "playwright test",
+    "test": "npm run test:dev",
+    "test:dev": "start-server-and-test start:wss http://localhost:3001 test:dev-core",
+    "test:dev-core": "NODE_ENV=test start-server-and-test dev http://localhost:3000 playwright:test"
+  },
+  "dependencies": {
+    "next": "14.2.15",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-use-action-cable-ts": "2.0.8"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.48.1",
+    "@types/node": "22.7.8",
+    "@types/rails__actioncable": "6.1.11",
+    "@types/react": "18.2.79",
+    "@types/react-dom": "18.2.25",
+    "start-server-and-test": "2.0.8",
+    "typescript": "5.6.3",
+    "ws": "8.18.0"
+  }
+}
